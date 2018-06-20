@@ -33,9 +33,9 @@ export class MoreInfoPage {
     console.log('ionViewDidLoad MoreInfoPage');
   }
 
-  collegeSearch(text){
+  collegeSearch(text){// searches Google for colleges/universities matching user input
     this.show = true;
-    this.http.get('https://maps.googleapis.com/maps/api/place/textsearch/json?key=AIzaSyBr2XrULVSA0harpYT4AQeNLQDFtfX79kw&type=university&query='+text, {}, {})
+    this.http.get('https://maps.googleapis.com/maps/api/place/textsearch/json?key=******************************&type=university&query='+text, {}, {})
       .then(res => {
         if (JSON.parse(res.data)) {
          this.results = JSON.parse(res.data);
@@ -49,13 +49,13 @@ export class MoreInfoPage {
       })
   }
 
-  setCollege(college){
+  setCollege(college){// sets college once user selects it from results list
     this.user.schoolName = college.name;
     this.user.school = college;
     this.show = false;
   }
 
-  setCollegeInfo($self){
+  setCollegeInfo($self){// sets the college information from sellected college's infor by google
     console.log('saving college...');
     let school = new $self.Parse.Object.extend('school');
     let query = new $self.Parse.Query(school);
@@ -100,7 +100,7 @@ export class MoreInfoPage {
     });
   }
 
-  setUserInfo(school, major, $self){
+  setUserInfo(school, major, $self){// sets the user information to be saved
     console.log('saving college in user...');
     let user = this.Parse.User.current();
     user.set('school', school);
