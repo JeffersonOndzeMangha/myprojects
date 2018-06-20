@@ -1,20 +1,20 @@
 <?php
 require_once ("../../vendor/autoload.php");
 
-$username = 'root';
-$password = 'J3ff3rs0n';
+$username = '';
+$password = '';
 
-$adminUser = 'userAdmin';
-$adminpassword = 'FlybyCl3an';
+$adminUser = '';
+$adminpassword = '';
 
 
-$db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@132.148.64.36/admin');
+$db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@***.***.**.**/admin');
 
 if($db_conn) {
 
-    $fbAdmins = $db_conn->flybyadmins;
-    $admindb = $db_conn->admin;
-    $adminsCol = $fbAdmins->admins;
+    $fbAdmins = $db_conn->admins;
+    $admindb = $db_conn->trueDB;
+    $adminsCol = $fbAdmins->adminsCol;
     $customData = [
         'fname' => 'userAdmin',
         'lname' => 'User Admin',
@@ -43,9 +43,9 @@ if($db_conn) {
     if($admindb){
         if($admindb->command($command)){
             $adminsCol->insertOne(array(
-                '_id' => md5(base64_encode($adminUser.':flybyadmin:')),
+                '_id' => md5(base64_encode($adminUser.':admin:')),
                 'userInfo' => $customData,
-                'authToken' => base64_encode(base64_encode($adminUser.':flybyadmin:'.$adminpassword))
+                'authToken' => base64_encode(base64_encode($adminUser.':admin:'.$adminpassword))
             ));
         }
     }
