@@ -1,4 +1,6 @@
 <?php
+/* For TESTING perpuses */
+
 require '../vendor/autoload.php';
 require './configs/dbConnection_class.php';
 require './configs/functions_class.php';
@@ -27,15 +29,15 @@ $data = array(
     "LastName" => "Ondze Mangha"
   ),
   "ContactInfo" => array(
-    "PhoneNumber" => "6822213536",
+    "PhoneNumber" => "**********",
     "Address" => array(
       "Street" => "T801 Salem Dr",
-      "City" => "Arlington",
+      "City" => "FakeTown",
       "State" => "Texas",
     )
   ),
   "Age" => 20,
-  "DOB" => "03/25/1997"
+  "DOB" => "07/25/1980"
 );
 //$industry_id = 105;
 //$JobSeeker->JobApply($JobSeeker->user_db_connection, $JobSeeker->user_information["_id"], "justfake10");
