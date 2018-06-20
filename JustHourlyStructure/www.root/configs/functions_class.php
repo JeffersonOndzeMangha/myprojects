@@ -12,7 +12,7 @@
 ************************************************/
 //md5("JustHourlyPassKey")
 /**
- * Connection Class: containes connection methods and types
+ * Functions Class: containes functions that are reused often
  */
 class functions_
 {
@@ -22,10 +22,10 @@ class functions_
     # code...
   }
 
-  protected function dataEncryption($data){
+  protected function dataEncryption($data){// Encrypt data
     return md5(base64_encode($data));
   }
-  protected function emailStripper($data){
+  protected function emailStripper($data){// String all special characters from email (@)
     return preg_replace("/[^a-z0-9]/", "", strtolower($data));
   }
 
@@ -33,8 +33,6 @@ class functions_
 db.justhourly_qa_db.insert(
    { _id: 10001, item: "box", qty: 20, name: "jobseeker1" }
 )*/
-
-
 
 
 
