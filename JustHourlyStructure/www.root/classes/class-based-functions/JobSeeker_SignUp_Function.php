@@ -1,6 +1,7 @@
 <?php
 
 public function SignUp(dbConnection_ $dbConnection_, $newjobseekeremail, $newjobseekerpassword, $newjobseekerzipcode){
+  //User sign up function, will create new user in the mongodb database
   $adminConnect = $dbConnection_->adminConnect();
   $db = $adminConnect->justhourly_qa_db;
   $col = $db->JobSeekersProfileInfo_Col;
@@ -20,7 +21,7 @@ public function SignUp(dbConnection_ $dbConnection_, $newjobseekeremail, $newjob
   );
 
 
-  $userProfileDocument = array(
+  $userProfileDocument = array(// creates a user document, to be inserted into the mongodb user profiles collection
     "PersonalInfo" => array(
       "Name" => array(
         "FirstName" => "",
@@ -62,9 +63,9 @@ public function SignUp(dbConnection_ $dbConnection_, $newjobseekeremail, $newjob
   echo("<br><br>");
 
 
-  $doc = $col->findOne(["_id"=>1001]);
+  $doc = $col->findOne(["_id"=>1001]);//testing
 
-  echo json_encode($doc);
+  echo json_encode($doc);//teting
 }
 
  ?>
