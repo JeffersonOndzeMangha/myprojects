@@ -1,9 +1,5 @@
 <?php
 session_start();
-require_once '../../assets/required_files.php';
-IncludeFiles($files);
-
-
  ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
