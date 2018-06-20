@@ -1,4 +1,4 @@
-#GYBOL Website Redesign
+# GYBOL Website Redesign
 
 Author: Jefferson Ondze Mangha
 Created: 03/01/2018
