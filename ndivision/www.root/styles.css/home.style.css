@@ -1,0 +1,292 @@
+/*home page css tyle sheet*/
+/*sections styling*/
+
+#services {
+	margin: 0px;
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(250,250,250,0.50);
+	text-align: center;
+}
+#services h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+	margin: 0px auto 30px auto;
+}
+#services p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#services h3{
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+	clear: both;
+}
+
+#approach {
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(185,110,117,0.60);
+	text-align: center;
+}
+#approach h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+}
+
+#approach p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#approach h3{
+	color:white;
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+	clear: both;
+}
+
+#clients {
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(0,0,117,0.60);
+	text-align: center;
+}
+#clients h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+}
+
+#clients p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#clients h3{
+	color:white;
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+}
+
+#company {
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(15,110,17,0.60);
+	text-align: center;
+}
+#company h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+}
+
+#company p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#company h3{
+	color:white;
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+}
+#carreers {
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(0,110,117,0.60);
+	text-align: center;
+}
+#carreers h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+}
+
+#carreers p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#carreers h3{
+	color:white;
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+}
+#contact_us {
+	padding-top:100px;
+	padding-bottom:150px;
+	background-color:rgba(0,110,0,0.60);
+	text-align: center;
+	clear: both;
+}
+#contact_us h1{
+	width:100%;
+	font-size:40px;
+	font-weight:300;
+}
+
+#contact_us p{
+	width:100%;
+	font-size:24px;
+	font-weight:200;
+}
+#contact_us h3{
+	color:white;
+	text-align:center;
+	font-weight: 400;
+	width:150px;
+	margin:30px auto 0 auto;
+	border-color:white;
+	border-style:solid;
+	border-width:thin;
+	line-height:55px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:20px;
+	padding-right:20px;
+	height:60px;
+	clear: both;
+}
+
+/*services section*/
+
+.gallery_box {
+	width: 100%;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+.gallery_item {
+	width: 32%;
+	float: left;
+	margin: 0 auto 30px auto;
+}
+.gallery_item .gallery_title {
+	width: 100%;
+	margin: 0 auto;
+}
+.gallery_item .gallery_title ul li {
+	text-decoration: none;
+	display: inline-block;
+}
+.gallery_item .gallery_title ul li h2 {
+	padding: 4px;
+	margin: 0;
+	font-size: 32px;
+	color: blue;
+	border-width: thick;
+	border-style: solid;
+	border-color: blue;
+	border-radius: 10px;
+	background-color: rgba(250, 250, 250, 0.9);
+	transition: all 0.5s linear 0s;
+}
+.gallery_item .gallery_title ul li p{
+	margin: 0 0 5px 0px;
+	padding: 0 0 0 5px;
+	font-size: 12px;
+	line-height: 10px;
+}
+.gallery_item .gallery_content{
+	width:100%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0px;
+	text-align: center;
+	font-size: 16px;
+	padding-left: 10px;
+}
+.gallery_content ul li{
+	display: block;
+	text-decoration: none;
+}
+.gallery_item a {
+	color: inherit;
+	transition: all 0.5s linear 0s;
+}
+/*------------------------------------------------------action for the service links-----------------------------------------------------------*/
+.gallery_title ul a:hover h2 {
+	color: white;
+	background-color: blue;
+}
+.gallery_title ul a:hover {
+	color: white;
+}
+/*------------------------------------------------------end of service links-------------------------------------------*/
+.info_video{
+	float: left;
+	width: 60%;
+	z-index: 100000;
+	margin-bottom: -400px;
+	height: 0px;
+	overflow: hidden;
+}
+.info_video2{
+	float: left;
+	width: 100%;
+	z-index: 100000;
+	margin-bottom: 250px;
+	height: 0px;
+}
+#infovideo{
+	width: inherit;
+}
