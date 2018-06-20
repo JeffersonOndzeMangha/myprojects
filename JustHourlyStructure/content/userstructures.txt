@@ -1,0 +1,164 @@
+Content: Contains user structures, and account references
+         to other user, employers, and documents in other
+         collections.
+Author: Jefferson Ondze Mangha
+CopyRightOf: justhourly.com
+Date: 10/08/2017
+V: 1.0.0
+
+Collection: JobSeekerProfileInfo_Col
+UserType: JobSeeker
+DocumentStructure:
+{
+  "_id": auto-generated-by-mongodb,
+  "PersonalInfo":
+  {
+    "Name":
+    {
+      "FirstName": jobseeker-first-name,
+      "LastName": jobseeker-last-name
+    },
+    "ContactInfo":
+    {
+      "PhoneNumber": jobseeker-phone-number,
+      "Email": jobseeker-email,
+      "Address":
+      {
+        "Street": jobseeker-street,
+        "City": jobseeker-city,
+        "State": jobseeker-state-code,
+        "Zip": jobseeker-zip-code
+      }
+    },
+    "DOB":
+    {
+      "d": jobseeker-birth-day,
+      "m": jobseeker-birth-month,
+      "y": jobseeker-birth-year
+    }
+  },
+  "AccountInfo":
+  {
+    "UserIdentity": jobseeker-identity-_id,
+    "JobSeekerProfiles":
+    [
+      {
+        "JobSeekerProfileIdentity": jobseeker-profile-identity,
+        "JobSeekerProfileIndustry": jobseeker-profile-industry,
+        "JobSeekerPrifleCreatedDate":
+        {
+          "d": jobseeker-profile-created-day,
+          "m": jobseeker-profile-created-month,
+          "y": jobseeker-profile-created-year
+        }
+      }
+    ],
+    "Applications":
+    [
+      {
+        "ApplicationIdentity": jobseeker-application-identity,
+        "ApplicationIndustry": jobseeker-application-industry,
+        "ApplicationJobIdentity": jobseeker-application-job-identity,
+        "ApplicationDate":
+        {
+          "d": application-day,
+          "m": application-month,
+          "y": application-year
+        }
+      }
+    ],
+    "JobSeekerSavedJobs": [jobseeker-saved-jobs-array(job-identity)],
+    "Recommendations": [jobseeker-recommendee-identity-array],
+    "ProfileDetails": [
+      "CreatedDate": {
+        "d": jobseeker-account-creation-day,
+        "m": jobseeker-account-creation-month,
+        "y": jobseeker-account-creation-year
+      }
+    ]
+  }
+
+}
+
+
+
+
+Collection: EmployerProfileInfo_Col
+UserType: Employer
+DocumentStructure:
+{
+  "_id": auto-generated-by-mongodb,
+  "PersonalInfo":
+  {
+    "EmployerBusinessInfo":
+    {
+      "EmployerName": the-employer-business-name,
+      "EmployerContactInfo":
+      {
+        "PhoneNumber": employer-business-number,
+        "Address":
+        {
+          "Street": employer-street
+          "City": employer-city,
+          "State": employer-state
+        },
+        "Email": employer-business-email
+      }
+    },
+    "EmployerAccountManagerInfo":
+    {
+      "Name":
+      {
+        "FirstName": account-manager-first-name,
+        "LastName": account-manager-last-name
+      },
+      "AccountManagerContactInfo":
+      {
+        "PhoneNumber": account-manager-phone-number,
+        "Email": account-manager-email
+      },
+      "JobTitle": account-manager-job-title
+    }
+  },
+  "AccountInfo":
+  {
+    "EmployerIdentity": employer-identity-_id,
+    "EmployerIndustry": employer-industry,
+    "PostedJobs":
+    [
+      {
+        "PostedJobIdentity": posted-job-identity,
+        "PostedJobIndustry": posted-job-industry(empoyer-industry),
+        "PostedJobTitle": posted-job-title,
+        "PostedJobDate":
+        {
+          "d": posted-job-day,
+          "m": posted-job-month,
+          "y": Posted-job-year
+        },
+        "PostedJobExpirationDate":
+        {
+          "d": posted-job-expiration-day,
+          "m": posted-job-expiration-month,
+          "y": posted-job-expiration-year
+        }
+      }
+    ]
+  },
+  "AccountType":
+  {
+    "TypeCode": [1001, 1002 1003, 1004] subscription-type,
+    "SubscriptionPrice": subscription-price-ie $75.99/month,
+    "TimeFrame":
+    {
+      "StartDate": date-subscription-starts,
+      "NextBillingDate": date-until-next-bill,
+    }
+  },
+  "AccountActivity":
+  {
+    "Active": if-account-is-active(true/false),
+    "LastActiveDate": the-last-time-account-was-logged-into
+  }
+
+}

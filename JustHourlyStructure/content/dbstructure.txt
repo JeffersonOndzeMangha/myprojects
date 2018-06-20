@@ -1,0 +1,122 @@
+Content: Contains the Database structure, and collection structures.
+         With hierarchy chain, and user roles.
+Author: Jefferson Ondze Mangha
+CopyRightOf: justhourly.com
+Date: 09/29/2017
+V: 1.0.0
+
+
+DbName: justhourly_qa_db
+Collections/Tables:
+{
+
+  [
+    Name: JobSeekersProfileInfo_Col,
+    Description: "Holds user profile information
+                 such as, name, DOB, etc... as
+                 well as, reference information
+                 to other collections",
+    UserRoles:
+    {
+      [
+        User: JobSeeker,
+        Roles: [findOne, updateOne, insertOne]
+      ],
+      [
+        User: Employer,
+        Roles: [findMany/find]
+      ]
+    }
+
+  ],
+
+  [
+    Name: EmployerProfileInfo_Col,
+    Description: "Holds employer user information
+                 such as, name, industry, etc... as
+                 well as, reference information
+                 to other collections, also all basic
+                 profile, and job posts will be public",
+    UserRoles:
+    {
+      [
+        User: JobSeeker,
+        Roles: [findMany/find]
+      ],
+      [
+        User: Employer,
+        Roles: [findOne, updateOne, insertOne]
+      ]
+    }
+
+  ],
+
+  [
+    Name: PostedJobsInfo_Col,
+    Description: "Holds posted jobs information
+                 such as, position, description,
+                 etc... job applications info as
+                 well as, reference information
+                 to other collections, also all basic
+                 information about job posts will be public",
+    UserRoles:
+    {
+      [
+        User: JobSeeker,
+        Roles: [findMany/find, updateOne]
+      ],
+      [
+        User: Employer,
+        Roles: [findOne, updateOne, insertOne] //depending on account type can insertMany
+      ]
+    }
+
+  ],
+
+  [
+    Name: ExpiredJobsInfo_Col,
+    Description: "Holds expired jobs information
+                 such as, position, description,
+                 etc... job applications info as
+                 well as, reference information
+                 to other collections, also all basic
+                 information about job posts will be public",
+    UserRoles:
+    {
+      [
+        User: JobSeeker,
+        Roles: []
+      ],
+      [
+        User: Employer,
+        Roles: [findOne, updateOne, insertOne] //can review and repost expired job posts
+      ]
+    }
+
+  ],
+
+  [
+    Name: TempPostedJobs_Col,
+    Description: "Holds new posted jobs information
+                 such as, position, description,
+                 etc... job applications info as
+                 well as, reference information
+                 to other collections, this collection
+                 will then be used by server operations
+                 to email new jobs to matched job seekers",
+    UserRoles:
+    {
+      [
+        User: JobSeeker,
+        Roles: []
+      ],
+      [
+        User: Employer,
+        Roles: [insertOne] //add jobs to this collection as well
+      ]
+    }
+
+  ],
+
+
+}
