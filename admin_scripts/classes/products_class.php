@@ -27,7 +27,7 @@ class Products_ implements ProductsInterface
       $pfilepath = $data['addProductFilepath'];
       $pdescription = $data['addProductDescription'];
 
-      try {
+      try {// insert product into the products collection
         $productsCol->insertOne([
           '_id' => new MongoDB\BSON\ObjectId(),
           'name' => $pname,
@@ -50,7 +50,7 @@ class Products_ implements ProductsInterface
     }
   }
 
-  public function DeleteProduct($data){
+  public function DeleteProduct($data){// deleting (archiving) product from inventory
     if(isset($data['_id'])){
         $pcode = $data['_id'];
 
@@ -67,7 +67,7 @@ class Products_ implements ProductsInterface
     }
   }
 
-  public function EditProduct($data){
+  public function EditProduct($data){// editing product information
     if(isset($data['_id'])){
         $pcode = $data['_id'];
 
@@ -110,9 +110,5 @@ class Products_ implements ProductsInterface
   }
 
 }
-
-
-
-
 
  ?>
