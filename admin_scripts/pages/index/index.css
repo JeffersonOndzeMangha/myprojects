@@ -1,0 +1,40 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+  color: black;
+}
+body {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+.container {
+  width: 82%;
+  padding: 0px;
+  margin: 0px;
+  right: 0px;
+  top: 0;
+  position: absolute;
+}
+header {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  margin: 0px;
+}
+aside {
+  height: 100vh;
+  width: 18%;
+  background-color: rgba(250,250,250, 0.5);
+  position: fixed;
+}
+main {
+  background-color: green;
+  height: 100vh;
+}
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: yellow;
+}
