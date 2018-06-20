@@ -1,5 +1,5 @@
 <?php
-/* Product class, for adding, deleting, editing and getting products to/from the database
+/* Admin User class, handles admin user signup (initiated by super admin not yet created), and login.
 Author: Jefferson Ondze Mangha
 Date: 03/18/2018
 */
@@ -24,9 +24,6 @@ class AdminUser_ extends Products_ implements AdminUserInterface
   }
 
 }
-
-
-
 
 
  ?>
