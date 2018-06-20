@@ -1,0 +1,74 @@
+page-more-info {
+
+  ion-content{
+    background-image: url("../../assets/imgs/background1.png") !important;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .center {
+      display: block;
+      margin-top: 20%;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+  }
+
+  form {
+    border-radius: 20px;
+    width: 95%;
+    border-radius: 5px;
+    padding: 0px 20px;
+    margin: 20px auto;
+  }
+
+  ion-label{
+    font-family: "Arvin" !important;
+    font-weight: normal !important;
+    font-size: 20px !important;
+    color: #4a588d;
+  }
+
+  ion-item {
+    border-bottom: 1px solid #4a588d !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+  }
+
+  #add_photo{
+    display: block;
+    margin-top: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10%;
+    width: 40%;
+  }
+
+  #button{
+    background-color: white;
+    color: #697bb7;
+    width: 40%;
+    margin: 40px auto 0px auto;
+    border-radius: 20px;
+    border-width: medium;
+    font-size: 1.2em;
+  }
+
+  #button2{
+    background-color: white;
+    color: #697bb7;
+    width: 40%;
+    margin: 40px auto 40px auto;
+    border-radius: 20px;
+    font-size: 1.2em;
+  }
+
+  #fb{
+    display: block;
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+}

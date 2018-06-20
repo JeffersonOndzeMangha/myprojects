@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>fake 2</title>
+    <style media="screen">
+      body {
+        padding: 0;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        margin-top: 0;
+        margin-bottom: 0;
+        width: 80%;
+      }
+      #top-bar {
+        display: none;
+      }
+      #footer {
+        display: none;
+      }
+      body div#sheets-viewport div[id] {
+        display: block !important;
+      }
+      table[Attributes Style] {
+          direction: ltr;
+          unicode-bidi: isolate;
+          border-top-width: 1px;
+          border-right-width: 1px;
+          border-bottom-width: 1px;
+          border-left-width: 1px;
+          -webkit-border-horizontal-spacing: 0px;
+          -webkit-border-vertical-spacing: 0px;
+      }
+      table.waffle {
+        width: 100% !important;
+        display: table;
+        border-collapse: collapse !important;
+        border-spacing: 2px !important;
+        border-color: grey !important;
+      }
+      .waffle thead {
+        display: none;
+      }
+      .waffle tbody {
+        width: 100%;
+      }
+      .waffle tbody tr td {
+        border: 0 !important;
+        background-color: transparent !important;
+      }
+      .waffle tbody tr .row-header-shim {
+        display: none !important;
+      }
+      div.ritz table.waffle tbody tr td.s2,
+      div.ritz table.waffle tbody tr td.s0,
+      div.ritz table.waffle tbody tr td.s1,
+      div.ritz table.waffle tbody tr td.s3,
+      div.ritz table.waffle tbody tr td.s4,
+      div.ritz table.waffle tbody tr td.s5,
+      div.ritz table.waffle tbody tr td.s6,
+      div.ritz table.waffle tbody tr td.s7,
+      div.ritz table.waffle tbody tr td.s8 {
+        padding: 5px !important;
+        display: table-cell !important;
+        vertical-align: inherit !important;
+        white-space: normal;
+      }
+      div.ritz table.waffle tbody tr:nth-child(even) {
+        background-color: rgba(13, 109, 82, 0.5) !important;
+      }
+      div.ritz table.waffle tbody tr td.s1 a{
+        color: #0d6d52 !important;
+        text-decoration: none;
+      }
+      div.ritz table.waffle tbody tr:nth-child(odd) td.s1 a,
+      div.ritz table.waffle tbody tr:nth-child(odd) td
+      {
+        color: #0d6d52 !important;
+      }
+      div.ritz table.waffle tbody tr:nth-child(even) td.s1 a,
+      div.ritz table.waffle tbody tr:nth-child(even) td
+      {
+        color: #FFF !important;
+      }
+      div.ritz table.waffle tbody tr td {
+        border: solid 2px #000 !important;
+      }
+      div.ritz table.waffle tbody tr td.s0 {
+        background-color: #0d6d52 !important;
+        color: #FFF !important;
+        font-weight: 600;
+        text-align: center;
+      }
+    </style>
+  </head>
+<script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+function getIt(URL, docName){
+  $.ajax({
+    type: 'POST',
+    url: URL,
+    data: {'doc': docName},
+    dataType: 'html',
+    success: function(result){
+      let frame = document.getElementsByTagName('html')[0];
+      let parser = new DOMParser();
+      let r = parser.parseFromString(result, 'text/html').getElementsByTagName('body')[0];
+      r.removeChild(r.childNodes[0]);
+      frame.appendChild(r);
+    },
+    error: function(error){
+      alert('did not!');
+    }
+  });
+};
+
+getIt('https://www.ohzoneclinics.com/test.php', 'NPADallas'); //gets you the NPA Dallas Listing
+//getIt('https://www.ohzoneclinics.com/test.php', 'NPAAtlanta') gets you the NPA Atlanta listing
+
+//for testing purposes...
+
+
+</script>
+</html>

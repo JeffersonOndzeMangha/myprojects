@@ -1,0 +1,29 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+  <img id= "main_logo" class= "center" src="../../assets/imgs/logo.png" alt="logo"/>
+
+  <form (ngSubmit)="loginForm()">
+    <ion-item>
+      <ion-label><img src="../../assets/imgs/user.png" alt="User Icon" width="30" height="30" /></ion-label>
+      <ion-input class="field__label-wrap" type="text" placeholder="Username" [(ngModel)]="user.username" name="username"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label><img src="../../assets/imgs/password.png" alt="Password Icon" width="30" height="30" /></ion-label>
+      <ion-input type="password" placeholder="Password" name="password"></ion-input>
+    </ion-item>
+    <button ion-button id= "button" type="submit" block>Sign In</button>
+  </form>
+
+  <img id= "fb" src="../../assets/imgs/FacebookLogin.png" alt="fb"/>
+
+  <button (click)="signupButton()" ion-button id= "button2" type="submit" block>Sign Up</button>
+
+
+
+</ion-content>
