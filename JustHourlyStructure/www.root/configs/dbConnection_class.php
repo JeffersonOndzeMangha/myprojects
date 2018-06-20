@@ -22,11 +22,11 @@ class dbConnection_
     # code...
   }
 
-  public function dbConnect($username, $password){
+  public function dbConnect($username, $password){// Connection using user entered values, (signin functionality)
 
       $authsource = 'justhourly_qa_db';
       try {
-        $db_connection = new MongoDB\Client('mongodb://'.$username.':'.$password.'@132.148.64.36/'.$authsource);
+        $db_connection = new MongoDB\Client('mongodb://'.$username.':'.$password.'@***.***.**.**/'.$authsource);
         $db_connection->justhourly_qa_db->JobSeekersProfileInfo_Col->find([]);
         return $db_connection;
       } catch (Exception $e) {
@@ -36,10 +36,10 @@ class dbConnection_
 
   }
 
-  public function adminConnect(){
+  public function adminConnect(){// Conection using db user admin user (signup functionality)
       $authsource = 'justhourly_qa_db';
 
-    return $Admindb_connection = new MongoDB\Client('mongodb://JustHourlyUserAdmin:37ea04e0fe6a72726a203a84febb5e23@132.148.64.36/'.$authsource);
+    return $Admindb_connection = new MongoDB\Client('mongodb://JustHourlyUserAdmin:**********@***.***.**.**/'.$authsource);
 
   }
 
