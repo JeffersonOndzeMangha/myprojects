@@ -10,8 +10,8 @@ import 'rxjs/add/operator/map';
 */
 @Injectable()
 export class ParseServiceProvider {
-  private parseAppId: string = "schola-487kwb682LJE";
-  private parseServerUrl: string = "http://schola-app.herokuapp.com/parse";
+  private parseAppId: string = "***********";
+  private parseServerUrl: string = "*************";
 
   retToken: any = {};
 
