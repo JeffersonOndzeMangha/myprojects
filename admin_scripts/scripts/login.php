@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');// for dev purposes
 header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
 header('Access-Control-Allow-Headers: Origin, Content-Type, X-Auth-Token, Authorization');
 require_once ("../../vendor/autoload.php");
@@ -14,16 +14,16 @@ $data = json_decode(file_get_contents('php://input'), true);
 
 if (isset($data['username']) && isset($data['password'])){
     $username = email2username($data['username']);
-    $password = md5(base64_encode(md5(test_input1($data['password']))));
+    $password = test_input1($data['password']);
 
 
-    $db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@132.148.64.36/flybyadmins');
+    $db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@***.***.**.**/flybyadmins');
 
     if($db_conn){
         $adminsCol = $db_conn->flybyadmins->selectCollection('admins');
 
         $user = $adminsCol->findOne(array(
-            '_id' => md5(base64_encode($username.':flybyadmin:'))
+            '_id' => //user id
         ));
 
         echo json_encode($user);
