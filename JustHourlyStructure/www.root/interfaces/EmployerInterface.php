@@ -1,6 +1,6 @@
 <?php
 /*
-Content: Contains interface/outline of the Emplyer class
+Content: Contains interface/outline of the Employer class
          with all the methods that can be used in the class.
 Author: Jefferson Ondze Mangha
 CopyRightOf: justhourly.com
@@ -34,8 +34,6 @@ interface EmployerInterface
   //public function RecommendOthers($JobSeekerIndentity, $RecommendPersonEmail); // function for Job Seekers to recommend their friends and family to our system, in order to earn points
 
 }
-
-
 
 
 
