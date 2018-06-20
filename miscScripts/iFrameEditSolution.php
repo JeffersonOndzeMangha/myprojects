@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *'); //For testing purposes
 if (isset($_POST)) {
    returnContent();
 } else  {
