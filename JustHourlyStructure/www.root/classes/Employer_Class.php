@@ -3,7 +3,8 @@
 Content: Contains the Employer class, including all functions,
          and variables, that can be accessed by other pages,
          in order to carry out Job Seeker related events.
-Author(s): Jefferson Ondze Mangha, David Alton Myers
+Author(s): Jefferson Ondze Mangha, 
+Contributor: David Alton Myers
 CopyRightOf: justhourly.com
 Date: 09/31/2017
 V: 1.0.0
@@ -336,6 +337,6 @@ class Employer_ extends functions_ implements EmployerInterface
 
 }
 
-*/
+*/ //block is commented for testing purposes
 
  ?>
