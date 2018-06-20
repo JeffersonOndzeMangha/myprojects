@@ -2,19 +2,19 @@
 require_once ("../../vendor/autoload.php");
 include "../functions.php";
 
-$username = 'root';
-$password = 'J3ff3rs0n';
+$username = '';
+$password = '';
 
-$tuser = email2username('jefferson@flybyclean.com');
-$tpass = md5(base64_encode(md5(test_input1('J3ff3rs0n!'))));
+$tuser = email2username('');
+$tpass = (test_input1('');
 
 
-$db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@132.148.64.36');
+$db_conn = new MongoDB\Client('mongodb://'.$username.':'.$password.'@***.***.**.**');
 
 if($db_conn) {
 
-    $fbAdmins = $db_conn->flybyadmins;
-    $adminsCol = $fbAdmins->admins;
+    $Admins = $db_conn->admins;
+    $adminsCol = $fbAdmins->adminsCol;
     $customData = [
         'fname' => 'Jefferson',
         'lname' => 'Ondze Mangha',
@@ -22,9 +22,9 @@ if($db_conn) {
         'sh' => 'JO',
         'age' => 20,
         'DOB' =>[
-            'm'=> 03,
+            'm'=> 08,
             'd' => 25,
-            'y' => 1997
+            'y' => 1890
         ]
 
     ];
@@ -36,18 +36,18 @@ if($db_conn) {
         'customData' => $customData,
         "roles"      => array
         (
-            array("role" => "readWrite", "db" => 'flybyadmins'),
-            array("role" => "readWrite", "db" => 'flybydb'),
-            array('role' => 'read', 'db' => 'flybyusers')
+            array("role" => "readWrite", "db" => 'admins'),
+            array("role" => "readWrite", "db" => 'trueDB'),
+            array('role' => 'read', 'db' => 'usersDB')
         )
     );
 
     if($fbAdmins){
         $fbAdmins->command($command);
         $adminsCol->insertOne(array(
-            '_id' => md5(base64_encode($tuser.':flybyadmin:')),
+            '_id' => md5(base64_encode($tuser.':admin:')),
             'userInfo' => $customData,
-            'authToken' => base64_encode(base64_encode($tuser.':flybyadmin:'.$tpass))
+            'authToken' => base64_encode(base64_encode($tuser.':admin:'.$tpass))
         ));
 
     }
