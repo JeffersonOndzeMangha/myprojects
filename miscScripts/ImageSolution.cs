@@ -15,7 +15,7 @@ namespace ImgSolutionApp
         static void Main(string[] args)
         {// Connecting to SQL Server
 
-            string conString = "Data Source=52.23.150.242;Initial Catalog=Rumbleon_QA;User ID=DBAdmin;Password=f#!@0m!n;MultipleActiveResultSets=True";
+            string conString = "Data Source=**.**.***.***;Initial Catalog=Rumbleon_QA;User ID=****;Password=****;MultipleActiveResultSets=True";
             DataSet tableset = new DataSet();
             using (SqlConnection cs = new SqlConnection(conString))
             {//Once connected, open connection and read data
